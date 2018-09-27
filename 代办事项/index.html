@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+    <h1>{{h1}}</h1>
+    <p><input type="text" :placeholder="pla" v-model="mod" @keyup.enter="fun"><button class="btn" @click="fun">{{btn}}</button></p>
+    <ul>
+        <li v-for="(a,index) in arrs">
+            <p>{{a.name}}<button class="btn1" @click="fun1(index)">{{a.dele}}</button></p>
+        </li>
+    </ul>
+
+</div>
+
+
+
+
+<script src="https://cdn.bootcss.com/vue/2.5.16/vue.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

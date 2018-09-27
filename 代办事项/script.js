@@ -1,0 +1,39 @@
+new Vue({
+    el:"#app",
+    data:{
+        h1:"待办事项",
+        btn:"添加",
+        pla:"接下来要做什么...",
+        mod:"",
+        arrs:[
+            {
+                name:"学习Vue.js",
+                dele:"删除",
+            },
+            {
+                name:"ff.js",
+                dele:"删除",
+            }
+        ]
+    },
+    methods:{
+        fun:function(){
+            if(this.mod!==""){
+                this.arrs.push(
+                    {
+                        name:this.mod,
+                        dele:"删除",
+                    }
+                )
+                this.mod=""
+            }else{
+                alert("填写内容再发布")
+            }
+        },
+        fun1:function(n){
+            this.arrs.splice(n,1)
+        },
+
+    },
+
+})
